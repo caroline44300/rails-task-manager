@@ -1,0 +1,21 @@
+<h1><%= @task.title %></h1>
+
+<h2><%= @task.completed %></h2>
+
+<p><%= @task.details %></p>
+
+<p>
+  <% if @task.completed %>
+      <i class="far fa-check-square"></i>  Completed
+  <% else %>
+    <i class="far fa-square"></i>  Not Completed
+  <% end %>
+</p>
+
+<p>
+  <i class="far fa-edit"></i> <%= link_to 'Edit task', edit_task_path  %>
+</p>
+
+<p>
+  <i class="fas fa-backward"></i> <%= link_to 'Back to tasks', tasks_path  %>
+</p>
